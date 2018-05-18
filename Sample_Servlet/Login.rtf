@@ -1,0 +1,82 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red63\green127\blue95;\red127\green0\blue85;\red63\green95\blue191;
+\red100\green100\blue100;\red42\green0\blue255;\red0\green0\blue192;\red127\green159\blue191;\red106\green62\blue62;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c24706\c37255\c74902;
+\csgenericrgb\c39216\c39216\c39216;\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c0\c0\c75294;\csgenericrgb\c49804\c62353\c74902;\csgenericrgb\c41569\c24314\c24314;
+}
+\margl1440\margr1440\vieww28600\viewh17520\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs22 \cf2 //package com.onlinetutoring.servlets;\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf3 import\cf0  java.io.IOException;\
+\cf3 import\cf0  java.io.PrintWriter;\
+\
+\cf3 import\cf0  javax.servlet.ServletException;\
+\cf3 import\cf0  javax.servlet.annotation.WebServlet;\
+\cf3 import\cf0  javax.servlet.http.HttpServlet;\
+\cf3 import\cf0  javax.servlet.http.HttpServletRequest;\
+\cf3 import\cf0  javax.servlet.http.HttpServletResponse;\
+\
+\pard\pardeftab720\partightenfactor0
+\cf4 /**\cf0 \
+\cf4  * \ul Servlet\ulnone  implementation class LoginPage\cf0 \
+\cf4  */\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf5 @WebServlet\cf0 (\cf6 "/LoginPage"\cf0 )\
+\pard\pardeftab720\partightenfactor0
+\cf3 public\cf0  \cf3 class\cf0  LoginPage \cf3 extends\cf0  HttpServlet \{\
+	\cf3 private\cf0  \cf3 static\cf0  \cf3 final\cf0  \cf3 long\cf0  \cf7 serialVersionUID\cf0  = 1L;\
+       \
+    \cf4 /**\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf4      * \cf8 @see\cf4  HttpServlet#HttpServlet()\cf0 \
+\cf4      */\cf0 \
+    \cf3 public\cf0  LoginPage() \{\
+        \cf3 super\cf0 ();\
+        \cf2 // \cf8 TODO\cf2  Auto-generated constructor stub\cf0 \
+    \}\
+\
+	\cf4 /**\cf0 \
+\cf4 	 * \cf8 @see\cf4  HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)\cf0 \
+\cf4 	 */\cf0 \
+	\cf3 protected\cf0  \cf3 void\cf0  doGet(HttpServletRequest \cf9 request\cf0 , HttpServletResponse \cf9 response\cf0 ) \cf3 throws\cf0  ServletException, IOException \{\
+		\
+		\cf9 response\cf0 .setContentType(\cf6 "text/html"\cf0 ); \
+		PrintWriter \cf9 out\cf0  = \cf9 response\cf0 .getWriter();\
+		\
+		\cf9 out\cf0 .println(\cf6 "<!DOCTYPE html>\\r\\n"\cf0  + \
+				\cf6 "<html>\\r\\n"\cf0  + \
+				\cf6 "<head>\\r\\n"\cf0  + \
+				\cf6 "<meta charset=\\"ISO-8859-1\\">\\r\\n"\cf0  + \
+				\cf6 "<title>Welcome to Online Tutoring System</title>\\r\\n"\cf0  + \
+				\cf6 "</head>\\r\\n"\cf0  + \
+				\cf6 "<body>\\r\\n"\cf0  + \
+				\cf6 "<form>\\r\\n"\cf0  + \
+				\cf6 "Name:<input type=\\"text\\" name=\\"userName\\"/><br/><br/>  \\r\\n"\cf0  + \
+				\cf6 "Password:<input type=\\"password\\" name=\\"userPass\\"/><br/><br/>  \\r\\n"\cf0  + \
+				\cf6 "<input type=\\"submit\\" value=\\"Submit\\" method=\\"POST\\">\\r\\n"\cf0  + \
+				\cf6 "</form>\\r\\n"\cf0  + \
+				\cf6 "</body>\\r\\n"\cf0  + \
+				\cf6 "</html>\\r\\n"\cf0  + \
+				\cf6 ""\cf0 );\
+	\}\
+\
+	\cf4 /**\cf0 \
+\cf4 	 * \cf8 @see\cf4  HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)\cf0 \
+\cf4 	 */\cf0 \
+	\cf3 protected\cf0  \cf3 void\cf0  doPost(HttpServletRequest \cf9 request\cf0 , HttpServletResponse \cf9 response\cf0 ) \cf3 throws\cf0  ServletException, IOException \{\
+		\cf2 // \cf8 TODO\cf2  Auto-generated method stub\cf0 \
+		doGet(\cf9 request\cf0 , \cf9 response\cf0 );\
+		\cf9 response\cf0 .setContentType(\cf6 "text/html"\cf0 ); \
+		PrintWriter \cf9 out\cf0  = \cf9 response\cf0 .getWriter();\
+		\cf9 out\cf0 .println(\cf6 "Logged in"\cf0 );\
+		\
+	\}\
+\
+\}\
+}

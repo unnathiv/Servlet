@@ -1,0 +1,84 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red63\green127\blue95;\red127\green0\blue85;\red63\green95\blue191;
+\red100\green100\blue100;\red42\green0\blue255;\red0\green0\blue192;\red127\green159\blue191;\red106\green62\blue62;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c24706\c37255\c74902;
+\csgenericrgb\c39216\c39216\c39216;\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c0\c0\c75294;\csgenericrgb\c49804\c62353\c74902;\csgenericrgb\c41569\c24314\c24314;
+}
+\margl1440\margr1440\vieww28600\viewh17520\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs22 \cf2 //package com.onlinetutoring.servlets;\cf0 \
+\
+\cf3 import\cf0  java.io.IOException;\
+\cf3 import\cf0  java.io.PrintWriter;\
+\
+\cf3 import\cf0  javax.servlet.ServletException;\
+\cf3 import\cf0  javax.servlet.annotation.WebServlet;\
+\cf3 import\cf0  javax.servlet.http.HttpServlet;\
+\cf3 import\cf0  javax.servlet.http.HttpServletRequest;\
+\cf3 import\cf0  javax.servlet.http.HttpServletResponse;\
+\
+\cf4 /**\cf0 \
+\cf4  * \ul Servlet\ulnone  implementation class RegistrationPage\cf0 \
+\cf4  */\cf0 \
+\cf5 @WebServlet\cf0 (\cf6 "/RegistrationPage"\cf0 )\
+\cf3 public\cf0  \cf3 class\cf0  RegistrationPage \cf3 extends\cf0  HttpServlet \{\
+	\cf3 private\cf0  \cf3 static\cf0  \cf3 final\cf0  \cf3 long\cf0  \cf7 serialVersionUID\cf0  = 1L;\
+       \
+    \cf4 /**\cf0 \
+\cf4      * \cf8 @see\cf4  HttpServlet#HttpServlet()\cf0 \
+\cf4      */\cf0 \
+    \cf3 public\cf0  RegistrationPage() \{\
+        \cf3 super\cf0 ();\
+        \cf2 // \cf8 TODO\cf2  Auto-generated constructor stub\cf0 \
+    \}\
+\
+	\cf4 /**\cf0 \
+\cf4 	 * \cf8 @see\cf4  HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)\cf0 \
+\cf4 	 */\cf0 \
+	\cf3 protected\cf0  \cf3 void\cf0  doGet(HttpServletRequest \cf9 request\cf0 , HttpServletResponse \cf9 response\cf0 ) \cf3 throws\cf0  ServletException, IOException \{\
+		\cf9 response\cf0 .setContentType(\cf6 "text/html"\cf0 ); \
+		PrintWriter \cf9 out\cf0  = \cf9 response\cf0 .getWriter();\
+		\cf9 out\cf0 .println(\cf6 "<!DOCTYPE html><body><p>Welcome...</p>"\cf0 );\
+		\cf9 out\cf0 .println(\cf6 "<form action=\\"action_page.php\\" style=\\"border:1px solid #ccc\\">\\r\\n"\cf0  + \
+				\cf6 "  <div class=\\"container\\">\\r\\n"\cf0  + \
+				\cf6 "    <h1>Sign Up</h1>\\r\\n"\cf0  + \
+				\cf6 "    <p>Please fill in this form to create an account.</p>\\r\\n"\cf0  + \
+				\cf6 "    <hr>\\r\\n"\cf0  + \
+				\cf6 "\\r\\n"\cf0  + \
+				\cf6 "    <label for=\\"email\\"><b>Email</b></label>\\r\\n"\cf0  + \
+				\cf6 "    <input type=\\"text\\" placeholder=\\"Enter Email\\" name=\\"email\\" required>\\r\\n"\cf0  + \
+				\cf6 "\\r\\n"\cf0  + \
+				\cf6 "    <label for=\\"psw\\"><b>Password</b></label>\\r\\n"\cf0  + \
+				\cf6 "    <input type=\\"password\\" placeholder=\\"Enter Password\\" name=\\"psw\\" required>\\r\\n"\cf0  + \
+				\cf6 "\\r\\n"\cf0  + \
+				\cf6 "    <label for=\\"psw-repeat\\"><b>Repeat Password</b></label>\\r\\n"\cf0  + \
+				\cf6 "    <input type=\\"password\\" placeholder=\\"Repeat Password\\" name=\\"psw-repeat\\" required>\\r\\n"\cf0  + \
+				\cf6 "\\r\\n"\cf0  + \
+				\cf6 "    <label>\\r\\n"\cf0  + \
+				\cf6 "      <input type=\\"checkbox\\" checked=\\"checked\\" name=\\"remember\\" style=\\"margin-bottom:15px\\"> Remember me\\r\\n"\cf0  + \
+				\cf6 "    </label>\\r\\n"\cf0  + \
+				\cf6 "\\r\\n"\cf0  + \
+				\cf6 "    <p>By creating an account you agree to our <a href=\\"#\\" style=\\"color:dodgerblue\\">Terms & Privacy</a>.</p>\\r\\n"\cf0  + \
+				\cf6 "\\r\\n"\cf0  + \
+				\cf6 "    <div class=\\"clearfix\\">\\r\\n"\cf0  + \
+				\cf6 "      <button type=\\"button\\" class=\\"cancelbtn\\">Cancel</button>\\r\\n"\cf0  + \
+				\cf6 "      <button type=\\"submit\\" class=\\"signupbtn\\">Sign Up</button>\\r\\n"\cf0  + \
+				\cf6 "    </div>\\r\\n"\cf0  + \
+				\cf6 "  </div>\\r\\n"\cf0  + \
+				\cf6 "</form>"\cf0 );\
+		\}\
+\
+	\cf4 /**\cf0 \
+\cf4 	 * \cf8 @see\cf4  HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)\cf0 \
+\cf4 	 */\cf0 \
+	\cf3 protected\cf0  \cf3 void\cf0  doPost(HttpServletRequest \cf9 request\cf0 , HttpServletResponse \cf9 response\cf0 ) \cf3 throws\cf0  ServletException, IOException \{\
+		\cf2 // \cf8 TODO\cf2  Auto-generated method stub\cf0 \
+		doGet(\cf9 request\cf0 , \cf9 response\cf0 );\
+	\}\
+\
+\}\
+}
